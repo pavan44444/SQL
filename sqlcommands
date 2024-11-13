@@ -1,0 +1,31 @@
+To create database: create database databasename;
+To see the list of databases created : show databases;
+To drop database: drop database databasename;
+Backup database : backup database databasename to disk = "filepath";
+sql backup with differential statement: backup database databasename to disk = "filepath" with differential;
+To create table : create table table_name( column1 datatype, column2 datatype, ........);
+column parameters specify the names of the columns of the table.
+datatype parameter specifies the type of data the column can hold.
+  eg, create table student( student_id int, student_name varchar(255));
+To create table using another table.
+  create table new_table_name as select column2, column2, ... from existing_table_name where ....;
+To drop table : drop table table_name;
+To delete the data inside a table, but not the table itself : Truncate table table_name;
+To alter table: 
+    to add column : alter table table_name add column_name datatype;
+    to drop column : alter table table_name drop column column_name;   
+    to rename column : alter table table_name rename column old_name to new_name;
+    to modify the datatype of a column : alter table table_name alter column column_name datatype;
+
+SQL Constraints: 
+    constraints are used to specify rules for dta in a table.
+  create table table_name ( column1 datatype constraint, column2 datatype constraint, .....);
+          NOT NULL : column cannot have null value.
+          UNIQUE : all values in a column are different.
+          PRIMARY KEY : uniquely identifies each row in a table. combination of not null and unique.
+          FOREIGN KEY : prevents actions that would destroy links between table.
+          CHECK : values in a table satisfies a specific condition.
+          DEFAULT : sets default value for a column if no value is specified.
+          CREATE INDEX : used to create and retrieve data from database very quickly.
+  SQL NOT NULL :
+
